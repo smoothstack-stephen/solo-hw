@@ -30,7 +30,7 @@ public class OuterClass {
 #### *File IO practice*
 1. Use the **append** parameter to append text to a file.
 ```java
-// Default value for append is false -- this causes text overwriting!
+// Default constructor "FileWriter(File file)" leads to overwriting existing text!
 FileWriter(File file, boolean append)
 ```
 2. You can assign a value to a variable within a conditional check (if the variable has already been created)!
