@@ -32,11 +32,11 @@ public class OuterClass {
 ```java
 FileWriter(File file, boolean append)
 ```
-2. You can assign a value to a variable within a conditional statement (if the variable has already been created)!
+2. You can assign a value to a variable within a conditional check (if the variable has already been created)!
 ```java
 Scanner scan = new Scanner(System.in);
 String line;
-while( (line = scan.nextLine()) != null ) {
-   // do something
-}
+
+// A value is assigned to the variable line in the conditional check
+while ( (line = scan.nextLine()) != null ) { ... }
 ```
