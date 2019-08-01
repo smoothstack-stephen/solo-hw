@@ -1,4 +1,4 @@
-# Lessons Learned
+# :floppy_disk: Lessons Learned
 
 ## Day 1 (July 30)
 #### *Printing triangles*
@@ -27,4 +27,5 @@ public class OuterClass {
 2. Make sure to start a git push from a clean repo (to avoid unnecessary conflicts).    
     
 ## Day 3 (August 1)
+#### *File IO, strings practice*
 TBD
