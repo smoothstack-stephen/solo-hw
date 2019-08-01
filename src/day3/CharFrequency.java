@@ -22,7 +22,7 @@ public class CharFrequency {
 			
 			System.out.println("Source text: \n" + sourceText);
 			System.out.println("Frequency of " + charToCount + " = " + frequency);
-			
+			fileReader.close();
 		} catch (IOException e) {
 			
 		}
