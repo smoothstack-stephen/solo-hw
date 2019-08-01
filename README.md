@@ -27,5 +27,16 @@ public class OuterClass {
 2. Make sure to start a git push from a clean repo (to avoid unnecessary conflicts).    
     
 ## Day 3 (August 1)
-#### *File IO, strings practice*
-TBD
+#### *File IO practice*
+1. Use the **append** parameter to append text to a file and have it persist.
+```java
+FileWriter(File file, boolean append)
+```
+2. You can assign a value to a variable within a conditional statement (if the variable has already been created)!
+```java
+Scanner scan = new Scanner(System.in);
+String line;
+while( (line = scan.nextLine()) != null ) {
+   // do something
+}
+```
