@@ -1,4 +1,4 @@
-# :floppy_disk: Lessons Learned
+# Lessons Learned
 
 ## Day 1 (July 30)
 #### *Printing triangles*
