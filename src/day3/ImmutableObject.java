@@ -19,7 +19,7 @@ public class ImmutableObject {
 		return this.name;
 	}
 	
-	public int value() {
+	public int getValue() {
 		return this.value;
 	}
 }
