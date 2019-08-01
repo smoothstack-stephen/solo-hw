@@ -28,8 +28,9 @@ public class OuterClass {
     
 ## Day 3 (August 1)
 #### *File IO practice*
-1. Use the **append** parameter to append text to a file and have it persist.
+1. Use the **append** parameter to append text to a file.
 ```java
+// Default value for append is false -- this causes text overwriting!
 FileWriter(File file, boolean append)
 ```
 2. You can assign a value to a variable within a conditional check (if the variable has already been created)!
