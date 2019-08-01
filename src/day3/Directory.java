@@ -3,19 +3,23 @@ import java.io.*;
 
 public class Directory {
 
-	public void listFiles(String filepath) {
-		try {
-			File folder = new File(filepath);
-			File[] files = folder.listFiles();
-			for (File entry : folder.listFiles()) {
-				if (entry.isDirectory()) {
-					System.out.println("[dir] " + entry.getCanonicalPath());
-					listFiles(entry.getAbsolutePath());
-				}
-				if (entry.isFile()) System.out.println("  > " + entry.getName());
+	public void listAllFiles(String filepath, String indent) {
+		File folder = new File(filepath);
+		File[] files = folder.listFiles();
+		for (File entry : files) {
+			if (entry.isDirectory()) {
+				System.out.println(indent + "- [" + entry.getName() + "]");
+				listAllFiles(entry.getAbsolutePath(), indent + "   ");
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
+			if (entry.isFile()) System.out.println(indent + "- " + entry.getName());
+		}
+	}
+	
+	public void listTopLevelOnly(String filepath) {
+		File folder = new File(filepath);
+		File[] files = folder.listFiles();
+		for (File entry : files) {
+			System.out.println(entry.getName());
 		}
 	}
 }
