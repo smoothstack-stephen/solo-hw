@@ -27,5 +27,17 @@ public class OuterClass {
 2. Make sure to start a git push from a clean repo (to avoid unnecessary conflicts).    
     
 ## Day 3 (August 1)
-#### *File IO, strings practice*
-TBD
+#### *File IO practice*
+1. Use the **append** parameter to append text to a file.
+```java
+// Default constructor "FileWriter(File file)" leads to overwriting existing text!
+FileWriter(File file, boolean append)
+```
+2. You can assign a value to a variable within a conditional check (if the variable has already been created)!
+```java
+Scanner scan = new Scanner(System.in);
+String line;
+
+// A value is assigned to the variable line in the conditional check
+while ( (line = scan.nextLine()) != null ) { ... }
+```
