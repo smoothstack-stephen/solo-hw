@@ -3,9 +3,10 @@ import java.io.*;
 
 public class FileAppend {
 
-	public void appendToFile(String filepath, String text) {
+	public void appendToFile(String fileName, String text) {
 		try {
-			File file = new File(filepath);
+			String filePath = System.getProperty("user.dir") + "\\src\\day3\\" + fileName;
+			File file = new File(filePath);
 			BufferedWriter fileWriter = new BufferedWriter(new FileWriter(file, true));
 			fileWriter.write(text + "\n");
 			fileWriter.close();

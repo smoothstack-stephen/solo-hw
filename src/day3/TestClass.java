@@ -34,9 +34,11 @@ public class TestClass {
 	public static void main(String[] args) {
 		TestClass tester = new TestClass();
 		
-		tester.testDirectory("C:\\Users\\stnam\\smoothstack2019\\solo-hw\\src");
-		tester.testFileAppend("C:\\Users\\stnam\\smoothstack2019\\solo-hw\\src\\day3\\FileAppendTest.txt", "The quick brown fox jumps over the lazy dog.");
-		tester.testCharFrequency("C:\\Users\\stnam\\smoothstack2019\\solo-hw\\src\\day3\\FileAppendTest.txt", args[0]);
+		String currentWorkingDirectory = System.getProperty("user.dir") + "\\src";
+		
+		tester.testDirectory(currentWorkingDirectory);
+		tester.testFileAppend("FileAppendTest.txt", "The quick brown fox jumps over the lazy dog.");
+		tester.testCharFrequency("FileAppendTest.txt", args[0]);
 	}
 
 }

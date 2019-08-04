@@ -1,0 +1,37 @@
+1. Which class would you use to store your birthday in years, months, days, seconds, and nanoseconds?
+>> java.time.LocalDateTime
+
+2. Given a random date, how would you find the date of the previous Thursday?
+>> increment current date until it's thursday, and then subtract by 7 days
+
+3. What is the difference between a ZoneId and a ZoneOffset?
+>> ZoneID: representation of the time-zone such as ‘Europe/Paris‘
+>> ZoneOffset: extends ZoneId and defines the fixed offset of the current time-zone with GMT/UTC, such as +02:00
+
+4. How would you convert an Instant to a ZonedDateTime? How would you convert a ZonedDateTime to an Instant?
+>> Instant --> ZonedDateTimeZonedDateTime : atZone(ZoneId zone)
+>> ZonedDateTime --> InstantZonedDateTime : now()
+
+5. Write an example that, for a given year, reports the length of each month within that year.
+>> LocalDate ld = LocalDate.of(year, 01, 01); // initialize as first day of the year
+>> while (ld.getMonthValue < 13) {
+>> 	System.out.println("Days in month " + ld.getMonthValue + " = " + month.lengthOfMonth());
+>> 	ld.plus(1, MONTHS);
+>> }
+
+6. Write an example that, for a given month of the current year, lists all of the Mondays in that month.
+>> LocalDate ld = LocalDate.of(currentYear, month, 01); // initialize as first day of the month
+>> while (ld.getMonthValue() < month + 1) {
+>> 	if (ld.getDayOfWeek() == DayOfWeek.MONDAY) {
+>> 		System.out.println(ld.toString());
+>> 		ld.plus(7, DAYS);
+>> 	}
+>> 	else ld.plus(1, DAYS)
+>> }
+
+7. Write an example that tests whether a given date occurs on Friday the 13th.
+>> LocalDate ld = LocalDate.of(year, month, day); // initiate as input date
+>> if ( (ld.getDayOfMonth() == 13) && (ld.getDayOfWeek() == DayOfWeek.FRIDAY) )
+>> 	System.out.println("YES");
+>> else
+>> 	System.out.println("NO");
